@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthem Jewels — Diamonds &amp; Gemstones | Natural &amp; Lab Grown | Surat India</title>
+<meta name="description" content="Anthem Jewels — premium diamonds and precious gemstones, natural and lab grown. GIA certified. Burma rubies, Kashmir sapphires, Colombian emeralds. Surat, India. Est. 2010.">
+<meta name="keywords" content="diamonds gemstones natural lab grown GIA certified ruby sapphire emerald Surat Anthem Jewels investment diamonds fancy colored">
+<meta name="author" content="Anthem Jewels">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anthem Jewels — Diamonds &amp; Precious Gemstones">
+<meta property="og:description" content="Natural &amp; lab grown diamonds, Burma rubies, Kashmir sapphires, Colombian emeralds. GIA certified. Surat, India.">
+<meta property="og:site_name" content="Anthem Jewels">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"JewelryStore","name":"Anthem Jewels","description":"Premium natural and lab grown diamonds and precious gemstones. GIA certified. Est. 2010.","telephone":"+918800806032","email":"anthem@jewelsdiamond.com","address":{"@type":"PostalAddress","streetAddress":"Surat Diamond Bourse","addressLocality":"Surat","addressRegion":"Gujarat","addressCountry":"IN"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Page Wipe Transition -->
+<div id="pageWipe">
+  <div class="wipe-bar"></div>
+</div>
+
+<!-- Cursor Sparkle Trail Container -->
+<div id="cursorTrail"></div>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-diamond"></div>
+  <div class="preloader-logo">Anthem <span>Jewels</span></div>
+  <div class="preloader-bar"></div>
+</div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home');return false;">Anthem <span>Jewels</span></div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme">
+      <span class="theme-toggle-icon">◈</span>
+    </button>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" onclick="showPage('home');closeMenu();return false;" id="nav-home" class="active-link">Home</a></li>
+    <li><a href="#" onclick="showPage('gallery');closeMenu();return false;" id="nav-gallery">Diamonds</a></li>
+    <li><a href="#" onclick="showPage('gemstones');closeMenu();return false;" id="nav-gemstones">Gemstones</a></li>
+    <li><a href="#" onclick="showPage('about');closeMenu();return false;" id="nav-about">About</a></li>
+    <li><a href="#" onclick="showPage('calculator');closeMenu();return false;" id="nav-calculator">Calculator</a></li>
+    <li><a href="#" onclick="showPage('contact');closeMenu();return false;" id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Sticky Quote Bar -->
+<div class="sticky-quote-bar" id="stickyQuoteBar">
+  <span class="sticky-quote-text">✦ Looking for something specific?</span>
+  <a class="sticky-quote-btn" href="https://wa.me/918800806032?text=Hi%2C%20I'm%20looking%20for%20a%20specific%20diamond%20from%20Anthem%20Jewels" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+  <button class="sticky-quote-close" onclick="document.getElementById('stickyQuoteBar').style.display='none'" aria-label="Close">✕</button>
+</div>
+
+<!-- ==================== HOME ==================== -->
+<div class="page active" id="home">
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <!-- Video Background -->
+    <div class="hero-video-wrap" id="heroVideoWrap">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-shiny-diamond-rotating-on-a-black-background-32987-large.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <canvas id="heroCanvas"></canvas>
+
+    <!-- 3D Diamond -->
+    <div class="hero-diamond">
+      <div class="shine-ring"></div>
+      <div class="shine-ring"></div>
+      <div class="shine-ring"></div>
+      <canvas id="diamondCanvas3d"></canvas>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Est. 2010 · Surat Diamond Bourse · GIA Certified</div>
+      <h1 class="hero-title">
+        Not Just Diamonds.<br>
+        <em>A Legacy</em><br>
+        Of Trust.
+      </h1>
+      <p class="hero-desc">
+        Over 14 years sourcing the world's finest natural diamonds and coloured gemstones —
+        for buyers who refuse to settle for less.
+      </p>
+      <div class="hero-cta">
+        <button class="btn-gold" onclick="showPage('gallery');return false;">Explore Diamonds</button>
+        <button class="btn-outline" onclick="showPage('gemstones');return false;">View Gemstones</button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">5K+</div>
+          <div class="stat-label">Stones Sourced</div>
+        </div>
+        <div>
+          <div class="stat-num">14+</div>
+          <div class="stat-label">Years Excellence</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Certified Quality</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video toggle -->
+    <button class="video-toggle" id="videoToggleBtn" onclick="toggleVideo()">
+      <span class="video-toggle-dot"></span>
+      <span id="videoToggleLabel">Disable Video</span>
+    </button>
+
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Natural Diamonds</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Lab Grown Diamonds</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Burma Ruby</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Kashmir Sapphire</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Colombian Emerald</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Round Brilliant</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Paraíba Tourmaline</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Princess Cut</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Alexandrite</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Fancy Colored Diamonds</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Tanzanite</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">GIA Certified</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Natural Diamonds</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Lab Grown Diamonds</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Burma Ruby</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Cushion Cut</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Marquise Cut</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Radiant Cut</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">Heart Shape</span><span class="marquee-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-num">01</div>
+      <div class="feature-icon">💎</div>
+      <div class="feature-title">Natural &amp; Lab Grown</div>
+      <p class="feature-text">We offer both natural earth-mined diamonds and premium lab-grown diamonds — same brilliance, same GIA/IGI certification, your choice of origin and budget.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">02</div>
+      <div class="feature-icon">✦</div>
+      <div class="feature-title">Rare Gemstones</div>
+      <p class="feature-text">Burma rubies, Kashmir sapphires, Colombian emeralds, Paraíba tourmalines — origin-certified coloured stones ethically sourced from the world's most prestigious mines.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">03</div>
+      <div class="feature-icon">◈</div>
+      <div class="feature-title">Bespoke Advisory</div>
+      <p class="feature-text">Our certified gemologists guide every client one-on-one — whether diamonds or gemstones, natural or lab-grown — to the perfect stone for any occasion or budget.</p>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials-section" id="testimonialsSection">
+    <div class="section-label" style="text-align:center;margin-bottom:16px;">Client Stories</div>
+    <h2 class="testimonials-title">What Our <em>Clients Say</em></h2>
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Anthem Jewels helped me find the most perfect D/IF round brilliant for my wife's engagement ring. The quality and transparency were unmatched. Highly recommend."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">P</div>
+            <div>
+              <div class="testi-name">Priya Sharma</div>
+              <div class="testi-location">Mumbai, India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I purchased a 3ct fancy yellow diamond as an investment. Dev was incredibly knowledgeable and the GIA certificate was delivered same day. Exceptional service."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Arjun Mehta</div>
+              <div class="testi-location">Dubai, UAE</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Been buying from Anthem for 3 years now. Every stone is exactly as described — no surprises. The sourcing from Antwerp is real. These are serious people."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Somchai Wiriyaporn</div>
+              <div class="testi-location">Bangkok, Thailand</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Found a rare 1.2ct fancy pink that I had been searching for over a year. Rudra located it within a week. The stone is absolutely breathtaking."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">L</div>
+            <div>
+              <div class="testi-name">Lisa Chen</div>
+              <div class="testi-location">Singapore</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The WhatsApp consultation was so personal and easy. I'm based in London and never felt any distance. The diamond arrived perfectly packaged. 10/10."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Ravi Patel</div>
+              <div class="testi-location">London, UK</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Anthem <span>Jewels</span></div>
+        <p class="footer-desc">Natural &amp; lab grown diamonds. Burma rubies, Kashmir sapphires, Colombian emeralds. GIA / IGI / GRS certified. Est. 2010 · Surat, India.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home');return false;">Home</a></li>
+          <li><a onclick="showPage('gallery');return false;">Diamonds</a></li>
+          <li><a onclick="showPage('gemstones');return false;">Gemstones</a></li>
+          <li><a onclick="showPage('about');return false;">About Us</a></li>
+          <li><a onclick="showPage('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918800806032">📞 +91 88008 06032</a></li>
+          <li><a href="mailto:anthem@jewelsdiamond.com">✉ anthem@jewelsdiamond.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Surat+Diamond+Bourse+(SDB)/data=!4m2!3m1!1s0x0:0x6fca4b2cdbdb6985?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">📍 Surat Diamond Bourse, Gujarat</a></li>
+          <li><a href="https://wa.me/918800806032" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+          <li><a href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener">📷 @anthem_jewels_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Anthem Jewels · Surat, Gujarat, India · All rights reserved.</div>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a class="social-btn" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a class="social-btn" href="mailto:anthem@jewelsdiamond.com" title="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<div class="page" id="about">
+
+  <div class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div>
+      <div class="about-hero-tag">Our Story</div>
+      <h1 class="about-hero-title">
+        Crafting <em>Legacy</em><br>
+        One Stone at a Time
+      </h1>
+    </div>
+  </div>
+
+  <div class="about-body">
+    <div class="about-text">
+      <h2>14 Years of Excellence in Diamonds &amp; Gemstones</h2>
+      <p>Founded with a passion for the world's rarest stones, Anthem Jewels has built over fourteen years of expertise in both diamonds and precious coloured gemstones — earned through integrity, precision, and a genuine love for the trade.</p>
+      <div class="about-divider"></div>
+      <p>We work directly with certified mining operations and established dealers across Belgium, South Africa, and India — eliminating middlemen and ensuring our clients receive the finest stones at transparent, fair pricing.</p>
+      <p>Every stone — diamond or gemstone — is hand-selected by our certified gemologists, graded to GIA, IGI, GRS or AGL standards, and verified to be ethically sourced and conflict-free.</p>
+    </div>
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">💎</div>
+            <div class="value-title">Authenticity</div>
+            <p class="value-text">Every stone is certified and verified before it reaches our clients.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌿</div>
+            <div class="value-title">Ethics</div>
+            <p class="value-text">Conflict-free sourcing in full compliance with global standards.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🔍</div>
+            <div class="value-title">Precision</div>
+            <p class="value-text">Expert grading and analysis on every carat we handle.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div class="value-title">Trust</div>
+            <p class="value-text">Long-term relationships built on transparency and honesty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT COUNTERS -->
+  <div class="about-counters" id="aboutCounters">
+    <div class="about-counter-item">
+      <div class="about-counter-num" data-target="14" data-suffix="+">0</div>
+      <div class="about-counter-label">Years of Excellence</div>
+    </div>
+    <div class="about-counter-item">
+      <div class="about-counter-num" data-target="2000" data-suffix="+">0</div>
+      <div class="about-counter-label">Diamonds Sourced</div>
+    </div>
+    <div class="about-counter-item">
+      <div class="about-counter-num" data-target="98" data-suffix="%">0</div>
+      <div class="about-counter-label">Client Satisfaction</div>
+    </div>
+    <div class="about-counter-item">
+      <div class="about-counter-num" data-target="12" data-suffix="">0</div>
+      <div class="about-counter-label">Countries Served</div>
+    </div>
+  </div>
+
+  <!-- TEAM SECTION -->
+   <div class="team-section">
+    <div class="team-section-header">
+      <div class="section-label">The People</div>
+      <h2 class="team-section-title">Experts Behind<br>Every <em>Gemstone</em></h2>
+      <p class="team-section-desc">Our team of certified gemologists and diamond specialists bring decades of combined expertise — sourcing, grading, and delivering the world's finest stones.</p>
+    </div>
+    <div class="team-grid-new">
+
+      <div class="team-card-new">
+        <div class="team-card-top">
+          <div class="team-avatar-new">D</div>
+          <div class="team-diamond-accent">◆</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-name-new">Dev Kahodariya</div>
+          <div class="team-role-new">Founder & Head Gemologist</div>
+          <div class="team-divider"></div>
+          <p class="team-bio">GIA certified with 18 years of experience sourcing D-Flawless stones from Antwerp, Mumbai and beyond.</p>
+        </div>
+        <div class="team-card-footer">
+          <span class="team-tag">GIA Certified</span>
+          <span class="team-tag">18 Yrs Exp</span>
+        </div>
+      </div>
+
+      <div class="team-card-new featured-team">
+        <div class="team-card-top">
+          <div class="team-avatar-new">R</div>
+          <div class="team-diamond-accent">◆</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-name-new">Rudra Kahodariya</div>
+          <div class="team-role-new">Diamond Sourcing Expert</div>
+          <div class="team-divider"></div>
+          <p class="team-bio">Specialist in rare fancy colored diamonds with direct connections to top mining operations across South Africa and Australia.</p>
+        </div>
+        <div class="team-card-footer">
+          <span class="team-tag">Fancy Colors</span>
+          <span class="team-tag">Rare Stones</span>
+        </div>
+      </div>
+
+      <div class="team-card-new">
+        <div class="team-card-top">
+          <div class="team-avatar-new">H</div>
+          <div class="team-diamond-accent">◆</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-name-new">Haim Guna</div>
+          <div class="team-role-new">Client Relations Director</div>
+          <div class="team-divider"></div>
+          <p class="team-bio">Fluent in 5 languages, Haim ensures every client — from Surat to Singapore — receives a truly personal diamond journey.</p>
+        </div>
+        <div class="team-card-footer">
+          <span class="team-tag">5 Languages</span>
+          <span class="team-tag">Private Advisory</span>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Anthem <span>Jewels</span></div>
+        <p class="footer-desc">Natural &amp; lab grown diamonds. Burma rubies, Kashmir sapphires, Colombian emeralds. GIA / IGI / GRS certified. Est. 2010 · Surat, India.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home');return false;">Home</a></li>
+          <li><a onclick="showPage('gallery');return false;">Diamonds</a></li>
+          <li><a onclick="showPage('gemstones');return false;">Gemstones</a></li>
+          <li><a onclick="showPage('about');return false;">About Us</a></li>
+          <li><a onclick="showPage('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918800806032">📞 +91 88008 06032</a></li>
+          <li><a href="mailto:anthem@jewelsdiamond.com">✉ anthem@jewelsdiamond.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Surat+Diamond+Bourse+(SDB)/data=!4m2!3m1!1s0x0:0x6fca4b2cdbdb6985?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">📍 Surat Diamond Bourse, Gujarat</a></li>
+          <li><a href="https://wa.me/918800806032" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+          <li><a href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener">📷 @anthem_jewels_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Anthem Jewels · Surat, Gujarat, India · All rights reserved.</div>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a class="social-btn" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a class="social-btn" href="mailto:anthem@jewelsdiamond.com" title="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== CONTACT ==================== -->
+<div class="page" id="contact">
+  <div class="contact-page">
+    <div class="contact-left">
+      <div class="section-label">Reach Out</div>
+      <h1 class="contact-title">Let's Begin Your <em>Diamond Journey</em></h1>
+      <p class="contact-desc">Whether you're looking for an engagement diamond, an investment stone, or simply have a question — our team is here to help. Expect a personal response within 24 hours.</p>
+      <div class="contact-info-block">
+        <a class="contact-info-item" href="tel:+918800806032">
+          <div class="contact-info-icon-wrap"><span>📞</span></div>
+          <div>
+            <div class="contact-info-label">Phone &amp; WhatsApp</div>
+            <div class="contact-info-value">+91 88008 06032</div>
+          </div>
+        </a>
+        <a class="contact-info-item" href="mailto:anthem@jewelsdiamond.com">
+          <div class="contact-info-icon-wrap"><span>✉</span></div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">anthem@jewelsdiamond.com</div>
+          </div>
+        </a>
+        <div class="contact-info-item">
+          <div class="contact-info-icon-wrap"><span>📍</span></div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Surat Diamond Bourse, Surat, Gujarat, India</div>
+          </div>
+        </div>
+        <a class="contact-info-item" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener">
+          <div class="contact-info-icon-wrap"><span>📷</span></div>
+          <div>
+            <div class="contact-info-label">Instagram &amp; Facebook</div>
+            <div class="contact-info-value">@anthem_jewels_</div>
+          </div>
+        </a>
+        <div class="contact-info-item">
+          <div class="contact-info-icon-wrap"><span>🕐</span></div>
+          <div>
+            <div class="contact-info-label">Working Hours</div>
+            <div class="contact-info-value">Mon – Sat · 10:00 AM – 7:00 PM IST</div>
+          </div>
+        </div>
+        <a class="contact-wa-direct" href="https://wa.me/918800806032?text=Hi%2C%20I%27d%20like%20to%20inquire%20about%20a%20stone" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp — Fastest Response
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="section-label">Private Inquiry</div>
+      <div style="height:30px"></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input class="form-input" type="text" placeholder="Your name" id="fname">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input class="form-input" type="text" placeholder="Last name" id="lname">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" placeholder="your@email.com" id="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Inquiry Type</label>
+        <select class="form-select" id="inquiry-type">
+          <option value="">Select inquiry type</option>
+          <option>Engagement Diamond</option>
+          <option>Investment Stone</option>
+          <option>Wholesale Inquiry</option>
+          <option>Custom Order</option>
+          <option>General Question</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Budget Range (USD)</label>
+        <select class="form-select" id="budget">
+          <option value="">Select budget range</option>
+          <option>$500 – $2,000</option>
+          <option>$2,000 – $10,000</option>
+          <option>$10,000 – $50,000</option>
+          <option>$50,000+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell us what you're looking for..." id="message"></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitForm()">Send Inquiry ◆</button>
+      <div class="form-success" id="form-success">
+        ◆ Thank you. We'll be in touch within 24 hours.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Anthem <span>Jewels</span></div>
+        <p class="footer-desc">Natural &amp; lab grown diamonds. Burma rubies, Kashmir sapphires, Colombian emeralds. GIA / IGI / GRS certified. Est. 2010 · Surat, India.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home');return false;">Home</a></li>
+          <li><a onclick="showPage('gallery');return false;">Diamonds</a></li>
+          <li><a onclick="showPage('gemstones');return false;">Gemstones</a></li>
+          <li><a onclick="showPage('about');return false;">About Us</a></li>
+          <li><a onclick="showPage('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918800806032">📞 +91 88008 06032</a></li>
+          <li><a href="mailto:anthem@jewelsdiamond.com">✉ anthem@jewelsdiamond.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Surat+Diamond+Bourse+(SDB)/data=!4m2!3m1!1s0x0:0x6fca4b2cdbdb6985?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">📍 Surat Diamond Bourse, Gujarat</a></li>
+          <li><a href="https://wa.me/918800806032" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+          <li><a href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener">📷 @anthem_jewels_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Anthem Jewels · Surat, Gujarat, India · All rights reserved.</div>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a class="social-btn" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a class="social-btn" href="mailto:anthem@jewelsdiamond.com" title="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== GALLERY ==================== -->
+<div class="page" id="gallery">
+
+  <div class="gallery-hero">
+    <div>
+      <div class="section-label">The Collection</div>
+      <h1 class="gallery-hero-title">Diamonds Worthy<br>of <em>Your Story</em></h1>
+      <p style="font-size:0.7rem;font-weight:300;color:var(--gray);margin-top:16px;letter-spacing:0.06em;max-width:480px;line-height:1.9;">Every stone below is hand-selected, GIA or IGI certified, and available for private inquiry. Click any diamond to learn more.</p>
+    </div>
+  </div>
+
+  <div class="gallery-filter">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+    <button class="filter-btn" onclick="filterGallery('round', this)">Round</button>
+    <button class="filter-btn" onclick="filterGallery('fancy', this)">Fancy Cuts</button>
+    <button class="filter-btn" onclick="filterGallery('colored', this)">Colored</button>
+    <button class="filter-btn" onclick="filterGallery('rare', this)">Rare</button>
+  </div>
+
+  <div class="gallery-masonry" id="galleryGrid">
+    <!-- Gallery items will be inserted here -->
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+    <div class="lightbox-content">
+      <div id="lightbox-img" style="display:flex;align-items:center;justify-content:center;min-height:240px;"></div>
+      <div class="lightbox-title" id="lightbox-title">Diamond Name</div>
+      <div class="lightbox-sub" id="lightbox-sub">Category · Details</div>
+      <div class="lightbox-viewers" id="lightboxViewers">
+        <span class="viewers-dot"></span>
+        <span id="viewersCount">2</span> people viewing this right now
+      </div>
+      <a class="lightbox-wa-btn" id="lightboxWaBtn" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Inquire on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Anthem <span>Jewels</span></div>
+        <p class="footer-desc">Natural &amp; lab grown diamonds. Burma rubies, Kashmir sapphires, Colombian emeralds. GIA / IGI / GRS certified. Est. 2010 · Surat, India.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home');return false;">Home</a></li>
+          <li><a onclick="showPage('gallery');return false;">Diamonds</a></li>
+          <li><a onclick="showPage('gemstones');return false;">Gemstones</a></li>
+          <li><a onclick="showPage('about');return false;">About Us</a></li>
+          <li><a onclick="showPage('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918800806032">📞 +91 88008 06032</a></li>
+          <li><a href="mailto:anthem@jewelsdiamond.com">✉ anthem@jewelsdiamond.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Surat+Diamond+Bourse+(SDB)/data=!4m2!3m1!1s0x0:0x6fca4b2cdbdb6985?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">📍 Surat Diamond Bourse, Gujarat</a></li>
+          <li><a href="https://wa.me/918800806032" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+          <li><a href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener">📷 @anthem_jewels_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Anthem Jewels · Surat, Gujarat, India · All rights reserved.</div>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a class="social-btn" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a class="social-btn" href="mailto:anthem@jewelsdiamond.com" title="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end #gallery page -->
+
+<!-- ==================== GEMSTONES PAGE ==================== -->
+<div class="page" id="gemstones">
+
+  <!-- Hero -->
+  <div class="gem-hero">
+    <div class="gem-hero-bg"></div>
+    <div class="gem-hero-content">
+      <div class="section-label">A New World of Colour</div>
+      <h1 class="gem-hero-title">Precious <em>Gemstones</em></h1>
+      <p class="gem-hero-desc">Burma rubies, Kashmir sapphires, Colombian emeralds — nature's most vivid masterpieces, certified and curated for the discerning collector.</p>
+    </div>
+    <!-- Floating gem orbs background -->
+    <div class="gem-orbs">
+      <div class="gem-orb" style="--c:#e63946;--s:180px;--x:10%;--y:20%;--d:6s;"></div>
+      <div class="gem-orb" style="--c:#2a6be0;--s:140px;--x:80%;--y:15%;--d:8s;"></div>
+      <div class="gem-orb" style="--c:#2d9e5f;--s:160px;--x:55%;--y:70%;--d:7s;"></div>
+      <div class="gem-orb" style="--c:#9b5de5;--s:120px;--x:20%;--y:75%;--d:9s;"></div>
+      <div class="gem-orb" style="--c:#f4a261;--s:100px;--x:70%;--y:45%;--d:5s;"></div>
+    </div>
+  </div>
+
+  <!-- ===== COLOR SWATCH FILTER ===== -->
+  <div class="gem-filter-section">
+    <div class="gem-filter-label">Filter by Colour</div>
+    <div class="gem-swatches" id="gemSwatches">
+      <button class="gem-swatch active" data-filter="all" style="--sc:#C9A84C;" onclick="filterGemstones('all',this)">
+        <span class="swatch-dot" style="background:linear-gradient(135deg,#e63946,#2a6be0,#2d9e5f,#f4a261)"></span>
+        <span class="swatch-name">All</span>
+      </button>
+      <button class="gem-swatch" data-filter="ruby" style="--sc:#e63946;" onclick="filterGemstones('ruby',this)">
+        <span class="swatch-dot" style="background:#e63946"></span>
+        <span class="swatch-name">Ruby</span>
+      </button>
+      <button class="gem-swatch" data-filter="sapphire" style="--sc:#2a6be0;" onclick="filterGemstones('sapphire',this)">
+        <span class="swatch-dot" style="background:#2a6be0"></span>
+        <span class="swatch-name">Sapphire</span>
+      </button>
+      <button class="gem-swatch" data-filter="emerald" style="--sc:#2d9e5f;" onclick="filterGemstones('emerald',this)">
+        <span class="swatch-dot" style="background:#2d9e5f"></span>
+        <span class="swatch-name">Emerald</span>
+      </button>
+      <button class="gem-swatch" data-filter="alexandrite" style="--sc:#9b5de5;" onclick="filterGemstones('alexandrite',this)">
+        <span class="swatch-dot" style="background:#9b5de5"></span>
+        <span class="swatch-name">Alexandrite</span>
+      </button>
+      <button class="gem-swatch" data-filter="tanzanite" style="--sc:#4361ee;" onclick="filterGemstones('tanzanite',this)">
+        <span class="swatch-dot" style="background:#4361ee"></span>
+        <span class="swatch-name">Tanzanite</span>
+      </button>
+      <button class="gem-swatch" data-filter="spinel" style="--sc:#d62828;" onclick="filterGemstones('spinel',this)">
+        <span class="swatch-dot" style="background:#d62828"></span>
+        <span class="swatch-name">Spinel</span>
+      </button>
+      <button class="gem-swatch" data-filter="paraiba" style="--sc:#00b4d8;" onclick="filterGemstones('paraiba',this)">
+        <span class="swatch-dot" style="background:#00b4d8"></span>
+        <span class="swatch-name">Paraíba</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== GEMSTONE GALLERY GRID ===== -->
+  <div class="gem-grid" id="gemGrid">
+    <!-- Rendered by JS -->
+  </div>
+
+  <!-- ===== GEMSTONE LIGHTBOX ===== -->
+  <div class="lightbox" id="gemLightbox">
+    <div class="lightbox-close" onclick="closeGemLightbox()">✕</div>
+    <div class="lightbox-content gem-lightbox-content">
+      <div id="gem-lightbox-visual"></div>
+      <div class="lightbox-title" id="gem-lightbox-title"></div>
+      <div class="lightbox-sub" id="gem-lightbox-sub"></div>
+      <div class="gem-lightbox-badges" id="gem-lightbox-badges"></div>
+      <div class="gem-lightbox-details" id="gem-lightbox-details"></div>
+      <a class="lightbox-wa-btn" id="gem-lightbox-wa" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Inquire on WhatsApp
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ===== BIRTHSTONE FINDER ===== -->
+  <div class="birthstone-section">
+    <div class="birthstone-header">
+      <div class="section-label" style="text-align:center">The Perfect Gift</div>
+      <h2 class="birthstone-title">Birthstone <em>Finder</em></h2>
+      <p class="birthstone-desc">Select a birth month to discover its precious gemstone — a timeless, emotionally resonant gift.</p>
+    </div>
+    <div class="birthstone-months" id="birthstoneMonths">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="birthstone-result" id="birthstoneResult" style="display:none;">
+      <div class="birthstone-gem-visual" id="birthstoneGemVisual"></div>
+      <div class="birthstone-gem-info">
+        <div class="birthstone-gem-name" id="birthstoneGemName"></div>
+        <div class="birthstone-gem-fact" id="birthstoneGemFact"></div>
+        <a class="btn-gold" id="birthstoneWaBtn" href="#" target="_blank" rel="noopener">Inquire on WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BUNDLE BUILDER ===== -->
+  <div class="bundle-section">
+    <div class="bundle-header">
+      <div class="section-label" style="text-align:center">Create Your Piece</div>
+      <h2 class="bundle-title">Diamond + Gemstone <em>Bundle Builder</em></h2>
+      <p class="bundle-desc">Pick a diamond and a gemstone — we'll send your custom combination straight to our WhatsApp.</p>
+    </div>
+    <div class="bundle-body">
+      <div class="bundle-step">
+        <div class="bundle-step-num">01</div>
+        <div class="bundle-step-label">Choose Diamond</div>
+        <select class="bundle-select" id="bundleDiamond">
+          <option value="">Select a diamond</option>
+          <option>Celestial Round · 2.10 ct · D/IF</option>
+          <option>Classic Solitaire · 1.50 ct · E/VS2</option>
+          <option>Arctic Light · 3.00 ct · D/VVS1</option>
+          <option>Solar Blaze · 1.75 ct · F/VS1</option>
+          <option>Polar Star · 2.40 ct · E/VVS2</option>
+          <option>Zenith Round · 4.10 ct · D/FL</option>
+          <option>Empress Cut · 1.80 ct · E/VVS1</option>
+          <option>Ocean Oval · 2.50 ct · G/VS1</option>
+          <option>Radiant Dawn · 2.70 ct · D/VVS2</option>
+          <option>Custom / I'll describe it</option>
+        </select>
+      </div>
+      <div class="bundle-plus">+</div>
+      <div class="bundle-step">
+        <div class="bundle-step-num">02</div>
+        <div class="bundle-step-label">Choose Gemstone</div>
+        <select class="bundle-select" id="bundleGem">
+          <option value="">Select a gemstone</option>
+          <option>Burma Ruby · 1.20 ct · Unheated</option>
+          <option>Kashmir Sapphire · 0.95 ct</option>
+          <option>Colombian Emerald · 1.50 ct</option>
+          <option>Alexandrite · 0.80 ct · Colour-Change</option>
+          <option>Paraíba Tourmaline · 0.65 ct</option>
+          <option>Tanzanite · 2.00 ct · AAA</option>
+          <option>Red Spinel · 1.10 ct · Burma</option>
+          <option>Custom / I'll describe it</option>
+        </select>
+      </div>
+      <div class="bundle-plus">=</div>
+      <div class="bundle-step">
+        <div class="bundle-step-num">03</div>
+        <div class="bundle-step-label">Send Inquiry</div>
+        <button class="btn-gold bundle-send-btn" onclick="sendBundleToWhatsApp()">Build My Piece ◆</button>
+      </div>
+    </div>
+  </div><!-- end .bundle-section -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Anthem <span>Jewels</span></div>
+        <p class="footer-desc">Natural &amp; lab grown diamonds. Burma rubies, Kashmir sapphires, Colombian emeralds. GIA / IGI / GRS certified. Est. 2010 · Surat, India.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home');return false;">Home</a></li>
+          <li><a onclick="showPage('gallery');return false;">Diamonds</a></li>
+          <li><a onclick="showPage('gemstones');return false;">Gemstones</a></li>
+          <li><a onclick="showPage('about');return false;">About Us</a></li>
+          <li><a onclick="showPage('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918800806032">📞 +91 88008 06032</a></li>
+          <li><a href="mailto:anthem@jewelsdiamond.com">✉ anthem@jewelsdiamond.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Surat+Diamond+Bourse+(SDB)/data=!4m2!3m1!1s0x0:0x6fca4b2cdbdb6985?sa=X&amp;ved=1t:2428&amp;ictx=111" target="_blank" rel="noopener">📍 Surat Diamond Bourse, Gujarat</a></li>
+          <li><a href="https://wa.me/918800806032" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+          <li><a href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener">📷 @anthem_jewels_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Anthem Jewels · Surat, Gujarat, India · All rights reserved.</div>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a class="social-btn" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a class="social-btn" href="mailto:anthem@jewelsdiamond.com" title="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+</div><!-- end #gemstones -->
+
+<!-- ==================== CALCULATOR ==================== -->
+<div class="page" id="calculator">
+
+  <!-- Page Hero -->
+  <section class="calc-hero">
+    <div class="calc-hero-bg"></div>
+    <div class="calc-hero-content">
+      <div class="section-label" style="text-align:center;margin-bottom:14px">Estimate Instantly</div>
+      <h1 class="calc-hero-title">Price <em>Calculator</em></h1>
+      <p class="calc-hero-desc">Get an indicative price range for natural diamonds, lab grown diamonds, and precious gemstones. Final pricing is confirmed by our team.</p>
+    </div>
+  </section>
+
+  <!-- Tab Switcher -->
+  <div class="calc-tabs-wrap">
+    <div class="calc-tabs" id="calcTabs">
+      <button class="calc-tab active" data-tab="natural" onclick="switchCalcTab('natural')">
+        <span class="calc-tab-icon">◆</span> Natural Diamond
+      </button>
+      <button class="calc-tab" data-tab="lab" onclick="switchCalcTab('lab')">
+        <span class="calc-tab-icon">◇</span> Lab Grown Diamond
+      </button>
+      <button class="calc-tab" data-tab="gem" onclick="switchCalcTab('gem')">
+        <span class="calc-tab-icon">✦</span> Gemstone
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== NATURAL DIAMOND CALCULATOR ===== -->
+  <div class="calc-panel active" id="calc-natural">
+    <div class="calc-grid">
+      <div class="calc-form-col">
+        <div class="calc-section-title">Natural Diamond</div>
+
+        <div class="calc-field">
+          <label class="calc-label">Carat Weight</label>
+          <div class="calc-slider-wrap">
+            <input type="range" class="calc-slider" id="nd-carat" min="0.25" max="10" step="0.05" value="1.00" oninput="updateNDCalc()">
+            <div class="calc-slider-val"><span id="nd-carat-val">1.00</span> ct</div>
+          </div>
+          <div class="calc-slider-labels"><span>0.25 ct</span><span>10 ct</span></div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Shape</label>
+          <div class="calc-chip-group" id="nd-shape">
+            <button class="calc-chip active" data-val="round" onclick="selectChip(this,'nd-shape');updateNDCalc()">Round</button>
+            <button class="calc-chip" data-val="princess" onclick="selectChip(this,'nd-shape');updateNDCalc()">Princess</button>
+            <button class="calc-chip" data-val="oval" onclick="selectChip(this,'nd-shape');updateNDCalc()">Oval</button>
+            <button class="calc-chip" data-val="emerald" onclick="selectChip(this,'nd-shape');updateNDCalc()">Emerald</button>
+            <button class="calc-chip" data-val="pear" onclick="selectChip(this,'nd-shape');updateNDCalc()">Pear</button>
+            <button class="calc-chip" data-val="cushion" onclick="selectChip(this,'nd-shape');updateNDCalc()">Cushion</button>
+            <button class="calc-chip" data-val="marquise" onclick="selectChip(this,'nd-shape');updateNDCalc()">Marquise</button>
+            <button class="calc-chip" data-val="radiant" onclick="selectChip(this,'nd-shape');updateNDCalc()">Radiant</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Colour Grade</label>
+          <div class="calc-chip-group" id="nd-color">
+            <button class="calc-chip active" data-val="D" onclick="selectChip(this,'nd-color');updateNDCalc()">D</button>
+            <button class="calc-chip" data-val="E" onclick="selectChip(this,'nd-color');updateNDCalc()">E</button>
+            <button class="calc-chip" data-val="F" onclick="selectChip(this,'nd-color');updateNDCalc()">F</button>
+            <button class="calc-chip" data-val="G" onclick="selectChip(this,'nd-color');updateNDCalc()">G</button>
+            <button class="calc-chip" data-val="H" onclick="selectChip(this,'nd-color');updateNDCalc()">H</button>
+            <button class="calc-chip" data-val="I" onclick="selectChip(this,'nd-color');updateNDCalc()">I</button>
+            <button class="calc-chip" data-val="J" onclick="selectChip(this,'nd-color');updateNDCalc()">J</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Clarity Grade</label>
+          <div class="calc-chip-group" id="nd-clarity">
+            <button class="calc-chip active" data-val="FL" onclick="selectChip(this,'nd-clarity');updateNDCalc()">FL</button>
+            <button class="calc-chip" data-val="IF" onclick="selectChip(this,'nd-clarity');updateNDCalc()">IF</button>
+            <button class="calc-chip" data-val="VVS1" onclick="selectChip(this,'nd-clarity');updateNDCalc()">VVS1</button>
+            <button class="calc-chip" data-val="VVS2" onclick="selectChip(this,'nd-clarity');updateNDCalc()">VVS2</button>
+            <button class="calc-chip" data-val="VS1" onclick="selectChip(this,'nd-clarity');updateNDCalc()">VS1</button>
+            <button class="calc-chip" data-val="VS2" onclick="selectChip(this,'nd-clarity');updateNDCalc()">VS2</button>
+            <button class="calc-chip" data-val="SI1" onclick="selectChip(this,'nd-clarity');updateNDCalc()">SI1</button>
+            <button class="calc-chip" data-val="SI2" onclick="selectChip(this,'nd-clarity');updateNDCalc()">SI2</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Cut Grade</label>
+          <div class="calc-chip-group" id="nd-cut">
+            <button class="calc-chip active" data-val="Excellent" onclick="selectChip(this,'nd-cut');updateNDCalc()">Excellent</button>
+            <button class="calc-chip" data-val="Very Good" onclick="selectChip(this,'nd-cut');updateNDCalc()">Very Good</button>
+            <button class="calc-chip" data-val="Good" onclick="selectChip(this,'nd-cut');updateNDCalc()">Good</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Currency</label>
+          <div class="calc-chip-group" id="nd-currency">
+            <button class="calc-chip active" data-val="USD" onclick="selectChip(this,'nd-currency');updateNDCalc()">USD $</button>
+            <button class="calc-chip" data-val="INR" onclick="selectChip(this,'nd-currency');updateNDCalc()">INR ₹</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="calc-result-col">
+
+        <!-- 3D Stone Viewer Box -->
+        <div class="stone-viewer-box" id="nd-viewer-box">
+          <div class="stone-viewer-label">◆ Live 3D Preview</div>
+          <canvas id="cv-nd-stone" class="stone-viewer-canvas"></canvas>
+          <div class="stone-viewer-hint">Drag to rotate</div>
+        </div>
+
+        <div class="calc-result-card" id="nd-result-card">
+          <div class="calc-result-label">Estimated Price Range</div>
+          <div class="calc-result-stone" id="nd-stone-desc">Round · 1.00 ct · D / FL · Excellent</div>
+          <div class="calc-result-price" id="nd-price">$7,500 – $9,200</div>
+          <div class="calc-result-note">Per carat basis · Indicative only · Rapaport-aligned</div>
+          <div class="calc-result-divider"></div>
+          <div class="calc-result-breakdown" id="nd-breakdown">
+            <div class="calc-breakdown-row"><span>Base Price/ct</span><span id="nd-base-pct">$7,500</span></div>
+            <div class="calc-breakdown-row"><span>Weight (ct)</span><span id="nd-weight-show">1.00 ct</span></div>
+            <div class="calc-breakdown-row calc-breakdown-total"><span>Est. Total Range</span><span id="nd-total-range">$7,500 – $9,200</span></div>
+          </div>
+          <div class="calc-result-divider"></div>
+          <div class="calc-result-disclaimer">
+            ◈ Prices are estimates based on Rapaport price sheet benchmarks and current market conditions. Actual price depends on fluorescence, symmetry, polish, and individual stone characteristics. Contact us for an exact quote.
+          </div>
+          <button class="btn-gold calc-inquire-btn" onclick="inquireCalcWhatsApp('natural')">Get Exact Quote on WhatsApp →</button>
+        </div>
+
+        <!-- 4C Guide -->
+        <div class="calc-guide-card">
+          <div class="calc-guide-title">◆ The 4C's Guide</div>
+          <div class="calc-guide-item"><strong>Cut</strong> — Most important factor. Excellent cut maximises brilliance.</div>
+          <div class="calc-guide-item"><strong>Colour</strong> — D is colourless (rarest). G–H offers great value.</div>
+          <div class="calc-guide-item"><strong>Clarity</strong> — FL is flawless. VS1/VS2 are eye-clean with better value.</div>
+          <div class="calc-guide-item"><strong>Carat</strong> — Weight. Exponential price jumps at 1ct, 2ct, 3ct milestones.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LAB GROWN DIAMOND CALCULATOR ===== -->
+  <div class="calc-panel" id="calc-lab">
+    <div class="calc-grid">
+      <div class="calc-form-col">
+        <div class="calc-section-title">Lab Grown Diamond</div>
+
+        <div class="calc-field">
+          <label class="calc-label">Carat Weight</label>
+          <div class="calc-slider-wrap">
+            <input type="range" class="calc-slider" id="lg-carat" min="0.25" max="10" step="0.05" value="1.00" oninput="updateLGCalc()">
+            <div class="calc-slider-val"><span id="lg-carat-val">1.00</span> ct</div>
+          </div>
+          <div class="calc-slider-labels"><span>0.25 ct</span><span>10 ct</span></div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Shape</label>
+          <div class="calc-chip-group" id="lg-shape">
+            <button class="calc-chip active" data-val="round" onclick="selectChip(this,'lg-shape');updateLGCalc()">Round</button>
+            <button class="calc-chip" data-val="princess" onclick="selectChip(this,'lg-shape');updateLGCalc()">Princess</button>
+            <button class="calc-chip" data-val="oval" onclick="selectChip(this,'lg-shape');updateLGCalc()">Oval</button>
+            <button class="calc-chip" data-val="emerald" onclick="selectChip(this,'lg-shape');updateLGCalc()">Emerald</button>
+            <button class="calc-chip" data-val="pear" onclick="selectChip(this,'lg-shape');updateLGCalc()">Pear</button>
+            <button class="calc-chip" data-val="cushion" onclick="selectChip(this,'lg-shape');updateLGCalc()">Cushion</button>
+            <button class="calc-chip" data-val="marquise" onclick="selectChip(this,'lg-shape');updateLGCalc()">Marquise</button>
+            <button class="calc-chip" data-val="radiant" onclick="selectChip(this,'lg-shape');updateLGCalc()">Radiant</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Colour Grade</label>
+          <div class="calc-chip-group" id="lg-color">
+            <button class="calc-chip active" data-val="D" onclick="selectChip(this,'lg-color');updateLGCalc()">D</button>
+            <button class="calc-chip" data-val="E" onclick="selectChip(this,'lg-color');updateLGCalc()">E</button>
+            <button class="calc-chip" data-val="F" onclick="selectChip(this,'lg-color');updateLGCalc()">F</button>
+            <button class="calc-chip" data-val="G" onclick="selectChip(this,'lg-color');updateLGCalc()">G</button>
+            <button class="calc-chip" data-val="H" onclick="selectChip(this,'lg-color');updateLGCalc()">H</button>
+            <button class="calc-chip" data-val="I" onclick="selectChip(this,'lg-color');updateLGCalc()">I</button>
+            <button class="calc-chip" data-val="J" onclick="selectChip(this,'lg-color');updateLGCalc()">J</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Clarity Grade</label>
+          <div class="calc-chip-group" id="lg-clarity">
+            <button class="calc-chip active" data-val="FL" onclick="selectChip(this,'lg-clarity');updateLGCalc()">FL</button>
+            <button class="calc-chip" data-val="IF" onclick="selectChip(this,'lg-clarity');updateLGCalc()">IF</button>
+            <button class="calc-chip" data-val="VVS1" onclick="selectChip(this,'lg-clarity');updateLGCalc()">VVS1</button>
+            <button class="calc-chip" data-val="VVS2" onclick="selectChip(this,'lg-clarity');updateLGCalc()">VVS2</button>
+            <button class="calc-chip" data-val="VS1" onclick="selectChip(this,'lg-clarity');updateLGCalc()">VS1</button>
+            <button class="calc-chip" data-val="VS2" onclick="selectChip(this,'lg-clarity');updateLGCalc()">VS2</button>
+            <button class="calc-chip" data-val="SI1" onclick="selectChip(this,'lg-clarity');updateLGCalc()">SI1</button>
+            <button class="calc-chip" data-val="SI2" onclick="selectChip(this,'lg-clarity');updateLGCalc()">SI2</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Growth Type</label>
+          <div class="calc-chip-group" id="lg-type">
+            <button class="calc-chip active" data-val="CVD" onclick="selectChip(this,'lg-type');updateLGCalc()">CVD</button>
+            <button class="calc-chip" data-val="HPHT" onclick="selectChip(this,'lg-type');updateLGCalc()">HPHT</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Currency</label>
+          <div class="calc-chip-group" id="lg-currency">
+            <button class="calc-chip active" data-val="USD" onclick="selectChip(this,'lg-currency');updateLGCalc()">USD $</button>
+            <button class="calc-chip" data-val="INR" onclick="selectChip(this,'lg-currency');updateLGCalc()">INR ₹</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result-col">
+
+        <!-- 3D Stone Viewer Box -->
+        <div class="stone-viewer-box" id="lg-viewer-box">
+          <div class="stone-viewer-label">◇ Live 3D Preview</div>
+          <canvas id="cv-lg-stone" class="stone-viewer-canvas"></canvas>
+          <div class="stone-viewer-hint">Drag to rotate</div>
+        </div>
+
+        <div class="calc-result-card" id="lg-result-card">
+          <div class="calc-result-label">Estimated Price Range</div>
+          <div class="calc-result-stone" id="lg-stone-desc">Round · 1.00 ct · D / FL · CVD</div>
+          <div class="calc-result-price" id="lg-price">$800 – $1,100</div>
+          <div class="calc-result-note">Per carat basis · IGI / GIA Certified</div>
+          <div class="calc-result-divider"></div>
+          <div class="calc-result-breakdown" id="lg-breakdown">
+            <div class="calc-breakdown-row"><span>Base Price/ct</span><span id="lg-base-pct">$800</span></div>
+            <div class="calc-breakdown-row"><span>Weight (ct)</span><span id="lg-weight-show">1.00 ct</span></div>
+            <div class="calc-breakdown-row calc-breakdown-total"><span>Est. Total Range</span><span id="lg-total-range">$800 – $1,100</span></div>
+          </div>
+          <div class="calc-result-divider"></div>
+          <div class="calc-result-disclaimer">
+            ◈ Lab grown prices have declined significantly in recent years. These are indicative estimates. Exact quotes depend on current market rates and certification. Contact us for live pricing.
+          </div>
+          <button class="btn-gold calc-inquire-btn" onclick="inquireCalcWhatsApp('lab')">Get Exact Quote on WhatsApp →</button>
+        </div>
+
+        <div class="calc-guide-card">
+          <div class="calc-guide-title">◇ Lab Grown vs Natural</div>
+          <div class="calc-guide-item"><strong>Identical</strong> — Same optical, chemical & physical properties.</div>
+          <div class="calc-guide-item"><strong>Price</strong> — Lab grown diamonds are typically 70–90% less than natural.</div>
+          <div class="calc-guide-item"><strong>CVD vs HPHT</strong> — CVD is more common. HPHT can produce type IIa stones.</div>
+          <div class="calc-guide-item"><strong>Certification</strong> — All our lab diamonds are IGI or GIA certified.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GEMSTONE CALCULATOR ===== -->
+  <div class="calc-panel" id="calc-gem">
+    <div class="calc-grid">
+      <div class="calc-form-col">
+        <div class="calc-section-title">Precious Gemstone</div>
+
+        <div class="calc-field">
+          <label class="calc-label">Gemstone Type</label>
+          <div class="calc-chip-group calc-chip-group--wide" id="gem-type">
+            <button class="calc-chip active" data-val="ruby" onclick="selectChip(this,'gem-type');updateGemCalc()">Ruby</button>
+            <button class="calc-chip" data-val="sapphire" onclick="selectChip(this,'gem-type');updateGemCalc()">Sapphire</button>
+            <button class="calc-chip" data-val="emerald" onclick="selectChip(this,'gem-type');updateGemCalc()">Emerald</button>
+            <button class="calc-chip" data-val="alexandrite" onclick="selectChip(this,'gem-type');updateGemCalc()">Alexandrite</button>
+            <button class="calc-chip" data-val="paraiba" onclick="selectChip(this,'gem-type');updateGemCalc()">Paraíba Tourmaline</button>
+            <button class="calc-chip" data-val="spinel" onclick="selectChip(this,'gem-type');updateGemCalc()">Spinel</button>
+            <button class="calc-chip" data-val="tanzanite" onclick="selectChip(this,'gem-type');updateGemCalc()">Tanzanite</button>
+            <button class="calc-chip" data-val="tsavorite" onclick="selectChip(this,'gem-type');updateGemCalc()">Tsavorite</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Carat Weight</label>
+          <div class="calc-slider-wrap">
+            <input type="range" class="calc-slider" id="gem-carat" min="0.10" max="10" step="0.05" value="1.00" oninput="updateGemCalc()">
+            <div class="calc-slider-val"><span id="gem-carat-val">1.00</span> ct</div>
+          </div>
+          <div class="calc-slider-labels"><span>0.10 ct</span><span>10 ct</span></div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Quality / Grade</label>
+          <div class="calc-chip-group" id="gem-quality">
+            <button class="calc-chip active" data-val="AAA" onclick="selectChip(this,'gem-quality');updateGemCalc()">AAA — Top</button>
+            <button class="calc-chip" data-val="AA" onclick="selectChip(this,'gem-quality');updateGemCalc()">AA — Fine</button>
+            <button class="calc-chip" data-val="A" onclick="selectChip(this,'gem-quality');updateGemCalc()">A — Good</button>
+            <button class="calc-chip" data-val="B" onclick="selectChip(this,'gem-quality');updateGemCalc()">B — Commercial</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Treatment</label>
+          <div class="calc-chip-group" id="gem-treatment">
+            <button class="calc-chip active" data-val="unheated" onclick="selectChip(this,'gem-treatment');updateGemCalc()">Unheated / Untreated</button>
+            <button class="calc-chip" data-val="heated" onclick="selectChip(this,'gem-treatment');updateGemCalc()">Heated / Minor</button>
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Origin Premium</label>
+          <div class="calc-chip-group" id="gem-origin">
+            <button class="calc-chip active" data-val="premium" onclick="selectChip(this,'gem-origin');updateGemCalc()">Premium Origin</button>
+            <button class="calc-chip" data-val="standard" onclick="selectChip(this,'gem-origin');updateGemCalc()">Standard Origin</button>
+          </div>
+          <div class="calc-origin-note" id="gem-origin-note">e.g. Burma Ruby, Kashmir Sapphire, Colombian Emerald</div>
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-label">Currency</label>
+          <div class="calc-chip-group" id="gem-currency">
+            <button class="calc-chip active" data-val="USD" onclick="selectChip(this,'gem-currency');updateGemCalc()">USD $</button>
+            <button class="calc-chip" data-val="INR" onclick="selectChip(this,'gem-currency');updateGemCalc()">INR ₹</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result-col">
+
+        <!-- 3D Stone Viewer Box -->
+        <div class="stone-viewer-box" id="gem-viewer-box">
+          <div class="stone-viewer-label">✦ Live 3D Preview</div>
+          <canvas id="cv-gem-stone" class="stone-viewer-canvas"></canvas>
+          <div class="stone-viewer-hint">Drag to rotate</div>
+        </div>
+
+        <div class="calc-result-card" id="gem-result-card">
+          <div class="calc-result-label">Estimated Price Range</div>
+          <div class="calc-result-stone" id="gem-stone-desc">Ruby · 1.00 ct · AAA · Unheated · Premium Origin</div>
+          <div class="calc-result-price" id="gem-price">$8,000 – $14,000</div>
+          <div class="calc-result-note">Per carat basis · GRS / AGL / GIA Certified</div>
+          <div class="calc-result-divider"></div>
+          <div class="calc-result-breakdown" id="gem-breakdown">
+            <div class="calc-breakdown-row"><span>Base Price/ct</span><span id="gem-base-pct">$8,000</span></div>
+            <div class="calc-breakdown-row"><span>Quality Multiplier</span><span id="gem-quality-mult">1.00×</span></div>
+            <div class="calc-breakdown-row"><span>Treatment Factor</span><span id="gem-treat-mult">1.00×</span></div>
+            <div class="calc-breakdown-row"><span>Origin Premium</span><span id="gem-origin-mult">1.00×</span></div>
+            <div class="calc-breakdown-row calc-breakdown-total"><span>Est. Total Range</span><span id="gem-total-range">$8,000 – $14,000</span></div>
+          </div>
+          <div class="calc-result-divider"></div>
+          <div class="calc-result-disclaimer">
+            ◈ Gemstone pricing is highly variable based on origin, colour saturation, clarity, and treatment history. Certified stones command significant premiums. This is a broad indicative range only.
+          </div>
+          <button class="btn-gold calc-inquire-btn" onclick="inquireCalcWhatsApp('gem')">Get Exact Quote on WhatsApp →</button>
+        </div>
+
+        <div class="calc-guide-card">
+          <div class="calc-guide-title">✦ Gemstone Premium Factors</div>
+          <div class="calc-guide-item"><strong>Origin</strong> — Burma Ruby, Kashmir Sapphire & Colombian Emerald command 2–5× premiums.</div>
+          <div class="calc-guide-item"><strong>Unheated</strong> — No-heat stones are 1.5–3× more valuable than heated equivalents.</div>
+          <div class="calc-guide-item"><strong>Colour</strong> — Vivid, saturated hue is the #1 value driver in coloured stones.</div>
+          <div class="calc-guide-item"><strong>Certification</strong> — GRS, GIA, AGL or Gübelin reports are essential for top-tier stones.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Banner -->
+  <div class="calc-disclaimer-banner">
+    <div class="calc-disclaimer-inner">
+      <span class="calc-disclaimer-icon">◈</span>
+      <span>All prices are indicative estimates based on current market benchmarks. Actual prices vary with specific stone characteristics, certification, and market conditions. Contact our team for a precise, personalised quote.</span>
+      <a class="calc-disclaimer-cta" href="https://wa.me/918800806032?text=Hi%2C%20I%27d%20like%20a%20price%20quote%20from%20Anthem%20Jewels" target="_blank" rel="noopener">WhatsApp Us →</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Anthem <span>Jewels</span></div>
+        <p class="footer-desc">Natural &amp; lab grown diamonds. Burma rubies, Kashmir sapphires, Colombian emeralds. GIA / IGI / GRS certified. Est. 2010 · Surat, India.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home');return false;">Home</a></li>
+          <li><a onclick="showPage('gallery');return false;">Diamonds</a></li>
+          <li><a onclick="showPage('gemstones');return false;">Gemstones</a></li>
+          <li><a onclick="showPage('calculator');return false;">Calculator</a></li>
+          <li><a onclick="showPage('about');return false;">About Us</a></li>
+          <li><a onclick="showPage('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:+918800806032">📞 +91 88008 06032</a></li>
+          <li><a href="mailto:anthem@jewelsdiamond.com">✉ anthem@jewelsdiamond.com</a></li>
+          <li><a href="https://www.google.com/maps/place/Surat+Diamond+Bourse" target="_blank" rel="noopener">📍 Surat Diamond Bourse, Gujarat</a></li>
+          <li><a href="https://wa.me/918800806032" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Anthem Jewels · Surat, Gujarat, India · All rights reserved.</div>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/anthem_jewels_" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a class="social-btn" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a class="social-btn" href="mailto:anthem@jewelsdiamond.com" title="Email">✉</a>
+      </div>
+    </div>
+  </footer>
+</div><!-- end #calculator -->
+
+<!-- WhatsApp Float -->
+<a class="whatsapp-float" href="https://wa.me/918800806032" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Live Chat Bubble -->
+<div class="live-chat-bubble" id="liveChatBubble">
+  <div class="live-chat-msg" id="liveChatMsg">
+    <div class="live-chat-avatar">◆</div>
+    <div class="live-chat-text">Hi! Looking for a diamond or gemstone? 💎</div>
+    <button class="live-chat-close" onclick="closeLiveChat()">✕</button>
+  </div>
+  <a class="live-chat-btn" href="https://wa.me/918800806032?text=Hi%2C%20I'm%20looking%20for%20a%20diamond%20from%20Anthem%20Jewels" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
