@@ -1523,20 +1523,41 @@ function initBirthstone() {
 }
 
 function showBirthstone(b, btn) {
+    // Update active button
     document.querySelectorAll('.birthstone-month-btn').forEach(x => x.classList.remove('active'));
     btn.classList.add('active');
-    const result = document.getElementById('birthstoneResult');
-    document.getElementById('birthstoneGemVisual').textContent = b.emoji;
-    document.getElementById('birthstoneGemVisual').style.color = b.color;
+
+    // Update orb colour
+    const orb = document.getElementById('birthstoneGemOrb');
+    if (orb) {
+        orb.style.setProperty('--orb-color', b.color);
+        orb.style.background = `radial-gradient(circle at 38% 38%, ${b.color}cc 0%, ${b.color}44 50%, transparent 75%)`;
+        orb.style.boxShadow = `0 0 40px ${b.color}55, 0 0 80px ${b.color}22`;
+        orb.style.borderColor = `${b.color}66`;
+    }
+    const emoji = document.getElementById('birthstoneGemEmoji');
+    if (emoji) emoji.textContent = b.emoji;
+
+    // Update text fields
+    const monthEl = document.getElementById('birthstoneResultMonth');
+    if (monthEl) {
+        monthEl.textContent = b.month;
+        monthEl.style.color = b.color;
+    }
     document.getElementById('birthstoneGemName').textContent = b.stone;
     document.getElementById('birthstoneGemFact').textContent = b.fact;
+
+    // Update WhatsApp link
     const wa = document.getElementById('birthstoneWaBtn');
     const msg = encodeURIComponent(`Hi, I'm looking for a ${b.stone} — the birthstone for ${b.month}. Can you help?`);
     wa.href = `https://wa.me/918800806032?text=${msg}`;
-    result.style.display = 'flex';
-    result.style.animation = 'none';
-    void result.offsetWidth;
-    result.style.animation = 'fadeInUp 0.45s var(--ease-out-expo) both';
+    wa.style.setProperty('--btn-glow', b.color + '55');
+
+    // Show result with animation
+    const result = document.getElementById('birthstoneResult');
+    result.classList.remove('bs-visible');
+    void result.offsetWidth; // force reflow
+    result.classList.add('bs-visible');
 }
 
 // Run initBirthstone on DOMContentLoaded if gemstones page is default
