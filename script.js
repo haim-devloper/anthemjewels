@@ -1523,41 +1523,20 @@ function initBirthstone() {
 }
 
 function showBirthstone(b, btn) {
-    // Update active button
     document.querySelectorAll('.birthstone-month-btn').forEach(x => x.classList.remove('active'));
     btn.classList.add('active');
-
-    // Update orb colour
-    const orb = document.getElementById('birthstoneGemOrb');
-    if (orb) {
-        orb.style.setProperty('--orb-color', b.color);
-        orb.style.background = `radial-gradient(circle at 38% 38%, ${b.color}cc 0%, ${b.color}44 50%, transparent 75%)`;
-        orb.style.boxShadow = `0 0 40px ${b.color}55, 0 0 80px ${b.color}22`;
-        orb.style.borderColor = `${b.color}66`;
-    }
-    const emoji = document.getElementById('birthstoneGemEmoji');
-    if (emoji) emoji.textContent = b.emoji;
-
-    // Update text fields
-    const monthEl = document.getElementById('birthstoneResultMonth');
-    if (monthEl) {
-        monthEl.textContent = b.month;
-        monthEl.style.color = b.color;
-    }
+    const result = document.getElementById('birthstoneResult');
+    document.getElementById('birthstoneGemVisual').textContent = b.emoji;
+    document.getElementById('birthstoneGemVisual').style.color = b.color;
     document.getElementById('birthstoneGemName').textContent = b.stone;
     document.getElementById('birthstoneGemFact').textContent = b.fact;
-
-    // Update WhatsApp link
     const wa = document.getElementById('birthstoneWaBtn');
     const msg = encodeURIComponent(`Hi, I'm looking for a ${b.stone} — the birthstone for ${b.month}. Can you help?`);
     wa.href = `https://wa.me/918800806032?text=${msg}`;
-    wa.style.setProperty('--btn-glow', b.color + '55');
-
-    // Show result with animation
-    const result = document.getElementById('birthstoneResult');
-    result.classList.remove('bs-visible');
-    void result.offsetWidth; // force reflow
-    result.classList.add('bs-visible');
+    result.style.display = 'flex';
+    result.style.animation = 'none';
+    void result.offsetWidth;
+    result.style.animation = 'fadeInUp 0.45s var(--ease-out-expo) both';
 }
 
 // Run initBirthstone on DOMContentLoaded if gemstones page is default
@@ -1637,43 +1616,36 @@ const birthstoneData = [
 ];
 
 // ===== GEMSTONE GRID DATA =====
+// TO ADD IMAGES: fill in img with your file path, e.g. img:'./images/gems/mogok-ruby.jpg'
+// Leave img:'' to show the clean placeholder. Images should be ~600x600px square.
 const gemstoneItems = [
-    // Rubies
-    { id:'r1', type:'ruby',        name:'Mogok Pigeon Blood',    origin:'Burma (Mogok)',       weight:'2.18 ct', grade:'AAA Unheated', cert:'GRS',     color:'#e63946', icon:'🔴', note:'No-heat · Pigeon blood colour · GRS "Pigeon Blood" report' },
-    { id:'r2', type:'ruby',        name:'Burmese Ruby Oval',     origin:'Burma',               weight:'1.42 ct', grade:'AA Heated',    cert:'GIA',     color:'#e63946', icon:'❤️', note:'Minor heat only · Vivid red · Eye-clean' },
-    { id:'r3', type:'ruby',        name:'Mozambique Ruby',       origin:'Mozambique',          weight:'3.05 ct', grade:'AA Unheated',  cert:'Gübelin', color:'#c1121f', icon:'🔴', note:'Unheated · Strong red fluorescence · Collector grade' },
-    { id:'r4', type:'ruby',        name:'Vivid Red Cushion',     origin:'Thailand',            weight:'0.88 ct', grade:'A Heated',     cert:'IGI',     color:'#e63946', icon:'❤️', note:'Calibrated size · Excellent for jewellery setting' },
-    // Sapphires
-    { id:'s1', type:'sapphire',    name:'Kashmir Royal Blue',    origin:'Kashmir',             weight:'1.12 ct', grade:'AAA Unheated', cert:'Gübelin', color:'#2a6be0', icon:'💙', note:'Velvety cornflower blue · Extremely rare Kashmir origin' },
-    { id:'s2', type:'sapphire',    name:'Ceylon Cornflower',     origin:'Sri Lanka',           weight:'2.56 ct', grade:'AAA Unheated', cert:'GRS',     color:'#3a86ff', icon:'🔵', note:'Cornflower blue · Sri Lanka · Unheated · Eye-clean' },
-    { id:'s3', type:'sapphire',    name:'Royal Blue Oval',       origin:'Madagascar',          weight:'4.10 ct', grade:'AA Heated',    cert:'GIA',     color:'#1d3557', icon:'💙', note:'Deep royal blue · Minor heat · Excellent brilliance' },
-    { id:'s4', type:'sapphire',    name:'Padparadscha Sapphire', origin:'Sri Lanka',           weight:'0.95 ct', grade:'AAA Unheated', cert:'GRS',     color:'#f4a261', icon:'🌸', note:'Rare pinkish-orange hue · "Lotus flower" colour · GRS certified' },
-    // Emeralds
-    { id:'e1', type:'emerald',     name:'Muzo Colombian',        origin:'Colombia (Muzo)',     weight:'1.88 ct', grade:'AAA',          cert:'GRS',     color:'#2d9e5f', icon:'💚', note:'Muzo mine · Minor oil · Vivid green · Top collector grade' },
-    { id:'e2', type:'emerald',     name:'Zambian Deep Green',    origin:'Zambia',              weight:'3.20 ct', grade:'AA',           cert:'Gübelin', color:'#1b7a40', icon:'🟢', note:'Deep bluish-green · Insignificant clarity enhancement' },
-    { id:'e3', type:'emerald',     name:'Vivid Green Pear',      origin:'Colombia',            weight:'0.92 ct', grade:'A',            cert:'AGL',     color:'#40916c', icon:'💚', note:'Calibrated pear shape · Suitable for pendant setting' },
-    // Alexandrite
-    { id:'a1', type:'alexandrite', name:'Russian Alexandrite',   origin:'Ural, Russia',        weight:'0.78 ct', grade:'AAA',          cert:'GRS',     color:'#9b5de5', icon:'🔮', note:'Strong colour change: emerald green → raspberry red' },
-    { id:'a2', type:'alexandrite', name:'Brazilian Alexandrite', origin:'Brazil',              weight:'1.30 ct', grade:'AA',           cert:'GIA',     color:'#7b2d8b', icon:'💜', note:'Good colour change · Brazilian origin · Eye-clean' },
-    // Tanzanite
-    { id:'t1', type:'tanzanite',   name:'AAA Tanzanite Oval',    origin:'Tanzania',            weight:'4.55 ct', grade:'AAA',          cert:'IGI',     color:'#4361ee', icon:'🔵', note:'Vivid blue-violet · Top D-block colour · Excellent cutting' },
-    { id:'t2', type:'tanzanite',   name:'Deep Violet Tanzanite', origin:'Tanzania',            weight:'2.80 ct', grade:'AA',           cert:'GIA',     color:'#560bad', icon:'💙', note:'Rich violet hue · Merelani Hills · Eye-clean' },
-    // Spinel
-    { id:'sp1', type:'spinel',     name:'Burma Red Spinel',      origin:'Burma (Mogok)',       weight:'1.62 ct', grade:'AAA',          cert:'GRS',     color:'#d62828', icon:'❤️', note:'Unheated · Vivid red · Mogok · No treatment whatsoever' },
-    { id:'sp2', type:'spinel',     name:'Hot Pink Spinel',       origin:'Burma / Vietnam',     weight:'0.95 ct', grade:'AA',           cert:'GIA',     color:'#e91e8c', icon:'💗', note:'Bright pinkish-red · Highly sought for modern jewellery' },
-    // Paraiba
-    { id:'p1', type:'paraiba',     name:'Brazilian Paraíba',     origin:'Paraíba, Brazil',     weight:'0.55 ct', grade:'AAA',          cert:'GRS',     color:'#00b4d8', icon:'🩵', note:'Neon electric blue · Copper-bearing · Extremely rare · GRS "Paraíba"' },
-    { id:'p2', type:'paraiba',     name:'Mozambique Paraíba',    origin:'Mozambique',          weight:'1.10 ct', grade:'AA',           cert:'GIA',     color:'#0077b6', icon:'💙', note:'Vivid blue-green · Larger size · Excellent for statement pieces' },
+    { id:'r1',  type:'ruby',        name:'Mogok Pigeon Blood',    origin:'Burma (Mogok)',       weight:'2.18 ct', grade:'AAA Unheated', cert:'GRS',     color:'#e63946', img:'', note:'No-heat · Pigeon blood colour · GRS "Pigeon Blood" report' },
+    { id:'r2',  type:'ruby',        name:'Burmese Ruby Oval',     origin:'Burma',               weight:'1.42 ct', grade:'AA Heated',    cert:'GIA',     color:'#e63946', img:'', note:'Minor heat only · Vivid red · Eye-clean' },
+    { id:'r3',  type:'ruby',        name:'Mozambique Ruby',       origin:'Mozambique',          weight:'3.05 ct', grade:'AA Unheated',  cert:'Gübelin', color:'#c1121f', img:'', note:'Unheated · Strong red fluorescence · Collector grade' },
+    { id:'r4',  type:'ruby',        name:'Vivid Red Cushion',     origin:'Thailand',            weight:'0.88 ct', grade:'A Heated',     cert:'IGI',     color:'#e63946', img:'', note:'Calibrated size · Excellent for jewellery setting' },
+    { id:'s1',  type:'sapphire',    name:'Kashmir Royal Blue',    origin:'Kashmir',             weight:'1.12 ct', grade:'AAA Unheated', cert:'Gübelin', color:'#2a6be0', img:'', note:'Velvety cornflower blue · Extremely rare Kashmir origin' },
+    { id:'s2',  type:'sapphire',    name:'Ceylon Cornflower',     origin:'Sri Lanka',           weight:'2.56 ct', grade:'AAA Unheated', cert:'GRS',     color:'#3a86ff', img:'', note:'Cornflower blue · Sri Lanka · Unheated · Eye-clean' },
+    { id:'s3',  type:'sapphire',    name:'Royal Blue Oval',       origin:'Madagascar',          weight:'4.10 ct', grade:'AA Heated',    cert:'GIA',     color:'#1d3557', img:'', note:'Deep royal blue · Minor heat · Excellent brilliance' },
+    { id:'s4',  type:'sapphire',    name:'Padparadscha Sapphire', origin:'Sri Lanka',           weight:'0.95 ct', grade:'AAA Unheated', cert:'GRS',     color:'#f4a261', img:'', note:'Rare pinkish-orange hue · "Lotus flower" colour · GRS certified' },
+    { id:'e1',  type:'emerald',     name:'Muzo Colombian',        origin:'Colombia (Muzo)',     weight:'1.88 ct', grade:'AAA',          cert:'GRS',     color:'#2d9e5f', img:'', note:'Muzo mine · Minor oil · Vivid green · Top collector grade' },
+    { id:'e2',  type:'emerald',     name:'Zambian Deep Green',    origin:'Zambia',              weight:'3.20 ct', grade:'AA',           cert:'Gübelin', color:'#1b7a40', img:'', note:'Deep bluish-green · Insignificant clarity enhancement' },
+    { id:'e3',  type:'emerald',     name:'Vivid Green Pear',      origin:'Colombia',            weight:'0.92 ct', grade:'A',            cert:'AGL',     color:'#40916c', img:'', note:'Calibrated pear shape · Suitable for pendant setting' },
+    { id:'a1',  type:'alexandrite', name:'Russian Alexandrite',   origin:'Ural, Russia',        weight:'0.78 ct', grade:'AAA',          cert:'GRS',     color:'#9b5de5', img:'', note:'Strong colour change: emerald green → raspberry red' },
+    { id:'a2',  type:'alexandrite', name:'Brazilian Alexandrite', origin:'Brazil',              weight:'1.30 ct', grade:'AA',           cert:'GIA',     color:'#7b2d8b', img:'', note:'Good colour change · Brazilian origin · Eye-clean' },
+    { id:'t1',  type:'tanzanite',   name:'AAA Tanzanite Oval',    origin:'Tanzania',            weight:'4.55 ct', grade:'AAA',          cert:'IGI',     color:'#4361ee', img:'', note:'Vivid blue-violet · Top D-block colour · Excellent cutting' },
+    { id:'t2',  type:'tanzanite',   name:'Deep Violet Tanzanite', origin:'Tanzania',            weight:'2.80 ct', grade:'AA',           cert:'GIA',     color:'#560bad', img:'', note:'Rich violet hue · Merelani Hills · Eye-clean' },
+    { id:'sp1', type:'spinel',      name:'Burma Red Spinel',      origin:'Burma (Mogok)',       weight:'1.62 ct', grade:'AAA',          cert:'GRS',     color:'#d62828', img:'', note:'Unheated · Vivid red · Mogok · No treatment whatsoever' },
+    { id:'sp2', type:'spinel',      name:'Hot Pink Spinel',       origin:'Burma / Vietnam',     weight:'0.95 ct', grade:'AA',           cert:'GIA',     color:'#e91e8c', img:'', note:'Bright pinkish-red · Highly sought for modern jewellery' },
+    { id:'p1',  type:'paraiba',     name:'Brazilian Paraíba',     origin:'Paraíba, Brazil',     weight:'0.55 ct', grade:'AAA',          cert:'GRS',     color:'#00b4d8', img:'', note:'Neon electric blue · Copper-bearing · Extremely rare · GRS "Paraíba"' },
+    { id:'p2',  type:'paraiba',     name:'Mozambique Paraíba',    origin:'Mozambique',          weight:'1.10 ct', grade:'AA',           cert:'GIA',     color:'#0077b6', img:'', note:'Vivid blue-green · Larger size · Excellent for statement pieces' },
 ];
 
 // ===== RENDER GEMSTONE GRID =====
 function renderGemGrid(filter) {
     const grid = document.getElementById('gemGrid');
     if (!grid) return;
-
     const filtered = filter === 'all' ? gemstoneItems : gemstoneItems.filter(g => g.type === filter);
     grid.innerHTML = '';
-
     filtered.forEach((g, idx) => {
         const card = document.createElement('div');
         card.className = 'gem-card';
@@ -1681,18 +1653,21 @@ function renderGemGrid(filter) {
         card.style.setProperty('--gem-glow', g.color + '55');
         card.style.setProperty('--gem-bg', g.color + '18');
         card.style.setProperty('--stagger', idx);
+        const visualHTML = g.img
+            ? `<img src="${g.img}" alt="${g.name}" class="gem-card-img" />`
+            : `<div class="gem-card-placeholder" style="--ph-color:${g.color};">
+                 <div class="gem-card-ph-type">${g.type.charAt(0).toUpperCase()+g.type.slice(1)}</div>
+                 <div class="gem-card-ph-name">${g.name}</div>
+                 <div class="gem-card-ph-weight">${g.weight}</div>
+               </div>`;
         card.innerHTML = `
-          <div class="gem-card-visual">
-            <div class="gem-card-icon">${g.icon}</div>
-          </div>
+          <div class="gem-card-visual">${visualHTML}</div>
           <div class="gem-card-body">
             <div class="gem-card-type" style="color:${g.color};">${g.type.charAt(0).toUpperCase()+g.type.slice(1)}</div>
             <div class="gem-card-name">${g.name}</div>
             <div class="gem-card-sub">${g.weight} · ${g.grade}</div>
             <div class="gem-card-origin">${g.origin}</div>
-            <div class="gem-cert-badges">
-              <span class="gem-cert">${g.cert}</span>
-            </div>
+            <div class="gem-cert-badges"><span class="gem-cert">${g.cert}</span></div>
           </div>`;
         card.onclick = () => openGemLightbox(g);
         grid.appendChild(card);
@@ -1716,8 +1691,14 @@ function filterGemstones(filter, btn) {
 
 // ===== OPEN GEM LIGHTBOX =====
 function openGemLightbox(g) {
-    document.getElementById('gem-lightbox-visual').innerHTML =
-        `<div class="gem-lightbox-visual-inner" style="--gem-c:${g.color};">${g.icon}</div>`;
+    const visualHTML = g.img
+        ? `<img src="${g.img}" alt="${g.name}" class="gem-lightbox-img" />`
+        : `<div class="gem-lightbox-ph" style="--gem-c:${g.color};">
+             <div class="gem-lightbox-ph-type">${g.type.toUpperCase()}</div>
+             <div class="gem-lightbox-ph-name">${g.name}</div>
+             <div class="gem-lightbox-ph-weight">${g.weight}</div>
+           </div>`;
+    document.getElementById('gem-lightbox-visual').innerHTML = visualHTML;
     document.getElementById('gem-lightbox-title').textContent = g.name;
     document.getElementById('gem-lightbox-sub').textContent   = g.weight + ' · ' + g.origin;
     document.getElementById('gem-lightbox-badges').innerHTML  =
